@@ -2,7 +2,7 @@ import argparse
 import glob
 import os
 import random
-
+import shutil
 import numpy as np
 
 from utils import get_module_logger
@@ -16,7 +16,35 @@ def split(data_dir):
     args:
         - data_dir [str]: data directory, /mnt/data
     """
-    # TODO: Implement function
+    
+    files = os.listdir(data_dir)
+
+    try:
+        os.makedirs(f"{data_dir}/train/")
+        os.makedirs(f"{data_dir}/val/")
+        os.makedirs(f"{data_dir}/test/")
+    except Exception as e:
+        print(e)
+        pass
+
+    random.shuffle(files)
+
+    for file in files[:70]:
+        source = f"{data_dir}/{file}"
+        destination = f"{data_dir}/train/{file}"
+        shutil.move(source, destination)
+
+
+    for file in files[70:80]:
+        source = f"{data_dir}/{file}"
+        destination = f"{data_dir}/val/{file}"
+        shutil.move(source, destination)
+
+
+    for file in files[80:]:
+        source = f"{data_dir}/{file}"
+        destination = f"{data_dir}/test/{file}"
+        shutil.move(source, destination)
     
 
 if __name__ == "__main__": 
