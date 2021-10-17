@@ -1,0 +1,10 @@
+{
+    "cache_key": "eyJhcmd1bWVudHMiOlsiLS1sb2dkaXIiLCIuL3RyYWluaW5nIl0sImNvbmZpZ3VyZV9rd2FyZ3MiOnt9LCJ3b3JraW5nX2RpcmVjdG9yeSI6Ii9ob21lL2h5dW5zL1NEQy9uZDAxMy1jMS12aXNpb24tc3RhcnRlciJ9",
+    "db": "",
+    "logdir": "./training",
+    "path_prefix": "",
+    "pid": 115531,
+    "port": 6006,
+    "start_time": 1634400685,
+    "version": "2.6.0"
+}
